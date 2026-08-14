@@ -1,0 +1,310 @@
+/* Luzeed — site public.
+ *
+ * Palette reprise à l'identique de `lib/core/theme/app_theme.dart` : le site
+ * et l'app doivent se ressembler, sinon la page de confidentialité a l'air
+ * d'appartenir à quelqu'un d'autre.
+ *
+ * Aucune dépendance : ni police distante, ni framework, ni script tiers. Une
+ * page de politique de confidentialité qui chargerait un CDN se contredirait
+ * elle-même — chaque requête sortante est une donnée qui fuit.
+ */
+
+:root {
+  --nuit-profonde: #070c1a;
+  --nuit-base: #0c1428;
+  --nuit-surface: #141d36;
+  --nuit-bordure: #27324f;
+  --violet: #7c5ce8;
+  --violet-clair: #9b85f0;
+  --violet-profond: #5b3fd0;
+  --texte: #eef0f8;
+  --texte-doux: #a8b0c8;
+  --largeur: 760px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--nuit-profonde);
+  color: var(--texte);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Bascule de langue. Une seule règle, et tout le contenu de l'autre langue
+ * disparaît — y compris pour un lecteur d'écran, qui ne doit pas lire la page
+ * deux fois. */
+body[data-lang="fr"] .en,
+body[data-lang="en"] .fr {
+  display: none !important;
+}
+
+a {
+  color: var(--violet-clair);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--texte);
+}
+
+/* ------------------------------------------------------------------ En-tête */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 24px;
+  background: rgba(7, 12, 26, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--nuit-bordure);
+}
+
+.marque {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: var(--texte);
+  text-decoration: none;
+  margin-right: auto;
+}
+
+.marque img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 15px;
+}
+
+nav a {
+  color: var(--texte-doux);
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  color: var(--texte);
+}
+
+.langues {
+  display: flex;
+  gap: 4px;
+  border: 1px solid var(--nuit-bordure);
+  border-radius: 999px;
+  padding: 3px;
+}
+
+.langues button {
+  border: 0;
+  background: none;
+  color: var(--texte-doux);
+  font: inherit;
+  font-size: 13px;
+  padding: 3px 11px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.langues button[aria-pressed="true"] {
+  background: var(--violet-profond);
+  color: #fff;
+}
+
+/* -------------------------------------------------------------------- Corps */
+
+main {
+  max-width: var(--largeur);
+  margin: 0 auto;
+  padding: 56px 24px 96px;
+}
+
+.heros {
+  text-align: center;
+  padding: 32px 0 8px;
+}
+
+.heros img {
+  width: 132px;
+  height: 132px;
+  border-radius: 30px;
+  margin-bottom: 28px;
+}
+
+h1 {
+  font-size: clamp(30px, 6vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.6px;
+  margin: 0 0 18px;
+}
+
+.accroche {
+  font-size: 19px;
+  color: var(--texte-doux);
+  max-width: 34em;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 25px;
+  letter-spacing: -0.3px;
+  margin: 56px 0 14px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 34px 0 8px;
+}
+
+p,
+ul {
+  color: var(--texte-doux);
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+strong {
+  color: var(--texte);
+  font-weight: 600;
+}
+
+.cartes {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin-top: 32px;
+}
+
+.carte {
+  background: var(--nuit-surface);
+  border: 1px solid var(--nuit-bordure);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.carte h3 {
+  margin: 0 0 6px;
+  font-size: 17px;
+}
+
+.carte p {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Encadré destiné à ce qui compte plus que le reste : ce qui ne quitte pas le
+ * téléphone. C'est la promesse de l'app, elle mérite d'être vue. */
+.appui {
+  background: linear-gradient(
+    135deg,
+    rgba(124, 92, 232, 0.16),
+    rgba(91, 63, 208, 0.08)
+  );
+  border: 1px solid rgba(155, 133, 240, 0.35);
+  border-radius: 18px;
+  padding: 24px;
+  margin: 32px 0;
+}
+
+.appui p:last-child {
+  margin-bottom: 0;
+}
+
+.bientot {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--nuit-bordure);
+  background: var(--nuit-surface);
+  color: var(--texte-doux);
+  font-size: 15px;
+}
+
+.date {
+  color: var(--texte-doux);
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 15px;
+  display: block;
+  overflow-x: auto;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--nuit-bordure);
+  vertical-align: top;
+}
+
+th {
+  color: var(--texte);
+  font-weight: 600;
+}
+
+td {
+  color: var(--texte-doux);
+}
+
+/* -------------------------------------------------------------------- Pied */
+
+footer {
+  border-top: 1px solid var(--nuit-bordure);
+  padding: 36px 24px 56px;
+  color: var(--texte-doux);
+  font-size: 14px;
+  text-align: center;
+}
+
+footer nav {
+  justify-content: center;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px 16px;
+  }
+
+  nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+  }
+
+  main {
+    padding: 36px 18px 72px;
+  }
+}

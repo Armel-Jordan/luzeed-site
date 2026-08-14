@@ -1,0 +1,696 @@
+<!doctype html>
+<!--
+  Région relevée le 11 août 2026 : us-west-2, West US (Oregon), États-Unis.
+  Lue dans Supabase → Project Settings → General → Region.
+
+  🔴 C'est HORS Union européenne, et le texte le dit maintenant explicitement
+  dans les deux langues. Un transfert hors UE ne s'écrit pas en creux : il lui
+  faut un mécanisme nommé — ici les clauses contractuelles types du contrat de
+  sous-traitance de Supabase.
+
+  Si la région change un jour, ces deux paragraphes changent avec elle.
+
+  ⚠️ Ne pas écrire ici le nom du marqueur d'avant-publication, même pour dire
+  qu'il a disparu : test/privacy_claims_test.dart compte ses occurrences dans
+  tout le fichier, commentaires compris, et une mention en prose suffit à faire
+  croire que la page n'est pas prête. La même faute a déjà été commise trois
+  fois — un test qui interdit une chaîne l'interdit AUSSI dans le texte qui
+  parle d'elle.
+-->
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Luzeed — Politique de confidentialité</title>
+    <meta
+      name="description"
+      content="Ce que Luzeed conserve, ce qui ne quitte jamais votre téléphone, et comment tout supprimer."
+    />
+    <link rel="icon" href="icone.png" />
+    <link rel="apple-touch-icon" href="icone.png" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="theme-color" content="#070c1a" />
+  </head>
+  <body data-lang="fr">
+    <header>
+      <a class="marque" href="index.html">
+        <img src="icone.png" alt="" />
+        Luzeed
+      </a>
+      <nav>
+        <a href="index.html">
+          <span class="fr">Accueil</span><span class="en">Home</span>
+        </a>
+        <a href="confidentialite.html" aria-current="page">
+          <span class="fr">Confidentialité</span><span class="en">Privacy</span>
+        </a>
+      </nav>
+      <div class="langues">
+        <button type="button" data-langue="fr" aria-pressed="true">FR</button>
+        <button type="button" data-langue="en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============================== FRANÇAIS ============================== -->
+      <div class="fr">
+        <h1>Politique de confidentialité</h1>
+        <p class="date">Dernière mise à jour : 11 août 2026</p>
+
+        <div class="appui">
+          <p>
+            <strong>En une phrase.</strong> Luzeed garde le moins de choses
+            possible. <strong>L'historique de tes nuits ne quitte jamais ton
+            téléphone.</strong> Il n'y a aucun traceur, aucune publicité, et
+            rien n'est vendu ni partagé.
+          </p>
+        </div>
+
+        <h2>Ce que nous conservons</h2>
+        <p>
+          Uniquement si tu crées un compte. Sans compte, cette section ne
+          s'applique pas du tout : l'app est entièrement utilisable en mode
+          invité.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Donnée</th>
+              <th>Quand</th>
+              <th>Pourquoi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Adresse e-mail</td>
+              <td>Création d'un compte par e-mail</td>
+              <td>T'identifier et te permettre de réinitialiser ton mot de passe</td>
+            </tr>
+            <tr>
+              <td>
+                Identifiant Apple, et l'adresse e-mail que tu choisis de
+                partager — éventuellement une adresse de relais privé Apple
+              </td>
+              <td>Connexion avec Apple</td>
+              <td>T'identifier d'une session à l'autre</td>
+            </tr>
+            <tr>
+              <td>
+                Identifiant Google, ton adresse e-mail Google et le nom associé
+                à ce compte
+              </td>
+              <td>Connexion avec Google</td>
+              <td>T'identifier d'une session à l'autre</td>
+            </tr>
+            <tr>
+              <td>Ton prénom, et ton nom si tu le donnes</td>
+              <td>
+                À la création du compte. Le prénom est demandé, le nom de
+                famille est facultatif. Modifiables ensuite dans l'onglet Moi
+              </td>
+              <td>Te saluer par ton nom plutôt que par un identifiant</td>
+            </tr>
+            <tr>
+              <td>Tes ambiances enregistrées : un nom, une liste de sons, un volume par son</td>
+              <td>Quand tu enregistres un mélange en étant connecté</td>
+              <td>Les retrouver sur un autre appareil</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          C'est tout. Ton mot de passe n'est jamais conservé en clair et nous ne
+          le voyons pas : il est haché par notre hébergeur avant d'être écrit.
+        </p>
+
+        <h2>Ce qui reste sur ton téléphone</h2>
+        <p>
+          Ces informations sont écrites dans le stockage privé de l'app et
+          <strong>ne sont jamais transmises</strong>, ni à nous ni à personne —
+          même si tu as un compte :
+        </p>
+        <ul>
+          <li>l'historique de tes nuits ;</li>
+          <li>tes réglages de réveil : heure, durée cible, réveil progressif ;</li>
+          <li>tes ambiances enregistrées, si tu n'as pas de compte ;</li>
+          <li>ta langue et ton thème.</li>
+        </ul>
+        <p>
+          Elles disparaissent quand tu désinstalles l'app, et l'historique des
+          nuits est effacé si tu supprimes ton compte.
+        </p>
+
+        <h3>Comment le suivi des nuits fonctionne, exactement</h3>
+        <p>
+          C'est une <strong>estimation</strong>, pas une mesure. L'app note deux
+          instants : celui où tu poses ton téléphone alors qu'un réveil est
+          armé, et celui où tu arrêtes la sonnerie. La différence est la durée
+          affichée.
+        </p>
+        <p>
+          <strong>Aucun capteur n'est utilisé</strong> : ni micro, ni
+          accéléromètre, ni détection de mouvement. L'app ne sait pas si tu as
+          bien dormi — elle sait seulement combien de temps s'est écoulé, et
+          elle ne prétend pas autre chose. Aucun score n'est inventé.
+        </p>
+
+        <h2>L'autorisation d'alarme, sur iPhone</h2>
+        <p>
+          Sur iOS 26 et suivants, Luzeed demande l'autorisation de poser une
+          <strong>vraie alarme système</strong> — celle qui sonne par-dessus
+          l'écran verrouillé et le mode silencieux, comme l'horloge de ton
+          iPhone. Sans elle, le réveil ne sonnerait qu'en gardant l'app ouverte
+          au premier plan, ce qui n'est pas un réveil.
+        </p>
+        <p>
+          <strong>Cette autorisation ne collecte rien.</strong> Elle ne donne
+          accès à aucune donnée : elle donne le droit de faire du bruit à une
+          heure que tu as choisie. L'heure de ton réveil reste sur ton téléphone,
+          comme le reste de tes réglages — elle n'est transmise à personne, pas
+          même à nous.
+        </p>
+        <p>
+          Tu peux la retirer à tout moment dans Réglages → Luzeed. Le reste de
+          l'app continue de fonctionner, et le réveil redevient ce qu'il était :
+          dépendant de l'app ouverte.
+        </p>
+
+        <h2>Apple Health : lecture seule, et rien ne sort</h2>
+        <p>
+          Luzeed peut lire le sommeil <strong>mesuré</strong> par ton iPhone ou
+          ton Apple Watch, pour remplacer son estimation par une vraie mesure.
+          C'est facultatif : sans autorisation, l'app fonctionne exactement comme
+          décrit ci-dessus.
+        </p>
+        <p>
+          Une donnée de santé n'est pas une donnée ordinaire. Le RGPD en fait une
+          <strong>catégorie particulière</strong> (article 9), et la base
+          juridique n'est pas la même que pour le reste de l'app : c'est ton
+          <strong>consentement explicite</strong>, donné dans la feuille
+          d'autorisation d'Apple, et retirable à tout moment.
+        </p>
+        <ul>
+          <li>
+            <strong>Nous lisons, nous n'écrivons jamais.</strong> Luzeed ne
+            dépose rien dans Apple Health. Son propre journal des nuits est une
+            estimation, et l'écrire là-bas la ferait passer pour une mesure aux
+            yeux des autres apps.
+          </li>
+          <li>
+            <strong>Uniquement le sommeil</strong> : les phases endormies. Ni
+            rythme cardiaque, ni pas, ni poids, ni cycle menstruel, ni quoi que
+            ce soit d'autre. Et pas même le « temps au lit » — être au lit n'est
+            pas dormir.
+          </li>
+          <li>
+            <strong>Rien n'est transmis.</strong> Ce qui est lu sert à l'affichage
+            sur ton téléphone et n'est envoyé ni à nous, ni à Supabase, ni à
+            personne. Ce n'est pas une intention : le code qui lit ces données ne
+            contient aucun client réseau, et un test automatique échoue si
+            quelqu'un en ajoute un.
+          </li>
+          <li>
+            <strong>Retirer l'accès</strong> : Réglages → Santé → Accès aux
+            données → Luzeed. Le retrait est immédiat et n'efface rien dans Apple
+            Health, qui ne nous appartient pas.
+          </li>
+        </ul>
+        <p>
+          🔴 Cette section décrit ce que le code fait aujourd'hui. Elle ne décrit
+          <em>pas</em> Android : Health Connect n'est pas branché, et le bouton y
+          annonce « bientôt ».
+        </p>
+
+        <h2>Ce que nous ne faisons pas</h2>
+        <ul>
+          <li>aucune analyse d'audience, aucun traceur, aucune publicité ;</li>
+          <li>aucune revente, aucun partage avec des tiers ;</li>
+          <li>aucune donnée de localisation ;</li>
+          <li>
+            aucune donnée de santé <strong>envoyée où que ce soit</strong> —
+            Luzeed peut lire ton sommeil dans Apple Health, si tu l'autorises,
+            et ce qu'elle y lit reste sur ton téléphone. Le détail est plus bas,
+            dans sa propre section ;
+          </li>
+          <li>aucun profilage, aucune décision automatisée.</li>
+        </ul>
+
+        <h3>Le micro : pourquoi iOS le mentionne alors qu'il n'est pas utilisé</h3>
+        <p>
+          Si ton iPhone affiche un jour que Luzeed « peut accéder au micro »,
+          voici la raison exacte. Le moteur audio de l'app s'appuie sur une
+          bibliothèque qui <em>expose</em> une fonction d'enregistrement dans
+          son code. Apple exige alors une mention, même pour du code qui n'est
+          jamais appelé.
+        </p>
+        <p>
+          <strong>Luzeed n'enregistre rien et ne demandera jamais l'accès au
+          micro.</strong> Aucune boîte de dialogue d'autorisation ne te sera
+          présentée, parce que l'app ne fait jamais la demande.
+        </p>
+
+        <h3>Les notifications</h3>
+        <p>
+          L'autorisation est demandée pour une seule chose : le réveil. La
+          refuser rend le réveil inutilisable, et n'a aucune autre conséquence.
+        </p>
+
+        <h2>Qui héberge</h2>
+        <p>
+          Les données de compte sont hébergées par
+          <a href="https://supabase.com/privacy" rel="noreferrer">Supabase</a>,
+          qui agit comme sous-traitant. Région du serveur :
+          <strong>West US (Oregon), États-Unis</strong> — identifiant
+          <code>us-west-2</code>.
+        </p>
+        <p>
+          Autrement dit : <strong>tes données de compte sont stockées aux
+          États-Unis</strong>, donc en dehors de l'Union européenne et en dehors
+          du Canada. Nous préférons l'écrire clairement plutôt que de le laisser
+          deviner.
+        </p>
+        <p>
+          Ce transfert repose sur les <em>clauses contractuelles types</em> de la
+          Commission européenne, prévues au contrat de sous-traitance de
+          Supabase. Concrètement, ça n'ajoute rien à ce qui est conservé — la
+          liste ci-dessus est complète — mais ça change le pays où ces données
+          reposent, et tu as le droit de le savoir avant de créer un compte.
+          L'app entière reste utilisable sans compte : dans ce cas, rien ne
+          quitte ton téléphone.
+        </p>
+        <p>
+          Si tu te connectes avec Apple, Apple gère l'authentification selon sa
+          propre politique de confidentialité. Nous ne recevons de sa part qu'un
+          identifiant et, si tu l'acceptes, une adresse e-mail.
+        </p>
+        <p>
+          Si tu te connectes avec
+          <a href="https://policies.google.com/privacy" rel="noreferrer">Google</a>,
+          Google gère l'authentification selon sa propre politique. Nous
+          recevons un identifiant, ton adresse e-mail et le nom de ton compte
+          Google. Deux différences avec Apple, qu'il faut connaître avant de
+          choisir : Google ne propose pas d'adresse de relais, donc c'est ta
+          vraie adresse qui nous parvient ; et Google transmet ton nom à chaque
+          connexion, là où Apple ne le donne qu'une seule fois.
+        </p>
+        <p>
+          Si l'adresse de ton compte Google est déjà celle d'un compte Luzeed
+          créé par e-mail, les deux se rejoignent : un seul compte, et tu entres
+          par le chemin que tu veux. Rien n'est dupliqué, et ton mot de passe
+          reste valable.
+        </p>
+        <p>
+          Nous ne demandons à Google que ton identité — aucun accès à Gmail, à
+          tes contacts, à ton agenda ni à Drive. Tu peux retirer cet accès à
+          tout moment depuis
+          <a href="https://myaccount.google.com/connections" rel="noreferrer">les connexions de ton compte Google</a>,
+          ce qui est indépendant de la suppression de ton compte Luzeed.
+        </p>
+
+        <h2>Combien de temps</h2>
+        <p>
+          Tes données de compte sont conservées jusqu'à ce que tu supprimes ton
+          compte. Il n'y a pas de durée automatique : nous ne supprimons rien
+          dans ton dos.
+        </p>
+
+        <h2>Supprimer ton compte</h2>
+        <p>
+          Depuis l'app : <strong>onglet Moi → Supprimer mon compte</strong>.
+          C'est immédiat et définitif. Ton compte, tes ambiances enregistrées et
+          ton historique de nuits sont effacés — le premier et les deuxièmes sur
+          le serveur, le troisième sur ton téléphone.
+        </p>
+        <p>
+          Rien n'est désactivé ni mis de côté : c'est une suppression. Nous ne
+          gardons aucune copie.
+        </p>
+
+        <h2>Tes droits</h2>
+        <p>
+          Si tu es dans l'Union européenne, le RGPD te donne un droit d'accès,
+          de rectification, d'effacement, de portabilité, de limitation et
+          d'opposition. Écris à
+          <a href="mailto:contact@luzeed.com">contact@luzeed.com</a> : nous
+          répondons sous 30 jours.
+        </p>
+        <p>
+          La base juridique du traitement est l'<strong>exécution du
+          contrat</strong> — sans adresse e-mail, il n'y a pas de compte à
+          retrouver. Aucun traitement ne repose sur un intérêt commercial.
+        </p>
+        <p>
+          Tu peux aussi saisir l'autorité de protection des données de ton pays.
+        </p>
+
+        <h2>Les enfants</h2>
+        <p>
+          Luzeed n'est pas destinée aux enfants de moins de 13 ans, et nous ne
+          collectons pas sciemment de données les concernant. Si tu penses que
+          c'est arrivé, écris-nous : nous supprimerons le compte.
+        </p>
+
+        <h2>Ce site</h2>
+        <p>
+          Ce site n'utilise ni cookie, ni analyse d'audience, ni police
+          distante, ni script tiers. La seule chose qu'il écrit sur ta machine
+          est ton choix de langue, gardé dans ton navigateur.
+        </p>
+
+        <h2>Changements</h2>
+        <p>
+          Si cette politique change, la date en haut de page est mise à jour. Un
+          changement qui te concerne réellement te sera signalé dans l'app, pas
+          seulement ici.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          <a href="mailto:contact@luzeed.com">contact@luzeed.com</a>
+        </p>
+      </div>
+
+      <!-- ============================== ENGLISH =============================== -->
+      <div class="en">
+        <h1>Privacy Policy</h1>
+        <p class="date">Last updated: 11 August 2026</p>
+
+        <div class="appui">
+          <p>
+            <strong>In one sentence.</strong> Luzeed keeps as little as
+            possible. <strong>Your night history never leaves your
+            phone.</strong> There are no trackers, no ads, and nothing is sold
+            or shared.
+          </p>
+        </div>
+
+        <h2>What we keep</h2>
+        <p>
+          Only if you create an account. Without one, this section does not
+          apply at all: the app is fully usable as a guest.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>When</th>
+              <th>Why</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Email address</td>
+              <td>Creating an account with email</td>
+              <td>To identify you and let you reset your password</td>
+            </tr>
+            <tr>
+              <td>
+                Apple identifier, and whichever email you choose to share —
+                possibly an Apple private relay address
+              </td>
+              <td>Signing in with Apple</td>
+              <td>To recognise you from one session to the next</td>
+            </tr>
+            <tr>
+              <td>
+                Google identifier, your Google email address and the name on
+                that account
+              </td>
+              <td>Signing in with Google</td>
+              <td>To recognise you from one session to the next</td>
+            </tr>
+            <tr>
+              <td>Your first name, and your last name if you give it</td>
+              <td>
+                When you create the account. The first name is asked for, the
+                last name is optional. Both editable later in the Me tab
+              </td>
+              <td>To greet you by name rather than by an identifier</td>
+            </tr>
+            <tr>
+              <td>Your saved atmospheres: a name, a list of sounds, a volume per sound</td>
+              <td>When you save a mix while signed in</td>
+              <td>So you find them again on another device</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          That is all. Your password is never stored in clear and we never see
+          it: our host hashes it before writing it.
+        </p>
+
+        <h2>What stays on your phone</h2>
+        <p>
+          The following is written to the app's private storage and
+          <strong>never transmitted</strong>, to us or anyone else — even if you
+          have an account:
+        </p>
+        <ul>
+          <li>your night history;</li>
+          <li>your alarm settings: time, target duration, gradual wake;</li>
+          <li>your saved atmospheres, if you have no account;</li>
+          <li>your language and theme.</li>
+        </ul>
+        <p>
+          It disappears when you uninstall the app, and the night history is
+          erased if you delete your account.
+        </p>
+
+        <h3>Exactly how night tracking works</h3>
+        <p>
+          It is an <strong>estimate</strong>, not a measurement. The app records
+          two moments: when you put your phone down with an alarm armed, and
+          when you stop the alarm. The difference is the duration shown.
+        </p>
+        <p>
+          <strong>No sensor is used</strong>: no microphone, no accelerometer,
+          no motion detection. The app does not know whether you slept well — it
+          only knows how much time passed, and it claims nothing more. No score
+          is invented.
+        </p>
+
+        <h2>The alarm permission, on iPhone</h2>
+        <p>
+          On iOS 26 and later, Luzeed asks permission to set a <strong>real
+          system alarm</strong> — the kind that rings over the Lock Screen and
+          through silent mode, like your iPhone's own clock. Without it the alarm
+          would only ring while the app is open in the foreground, which is not
+          an alarm.
+        </p>
+        <p>
+          <strong>This permission collects nothing.</strong> It grants access to
+          no data: it grants the right to make noise at a time you chose. Your
+          alarm time stays on your phone like the rest of your settings — it is
+          transmitted to no one, not even to us.
+        </p>
+        <p>
+          You can withdraw it at any time in Settings → Luzeed. The rest of the
+          app keeps working, and the alarm goes back to what it was: dependent on
+          the app being open.
+        </p>
+
+        <h2>Apple Health: read only, and nothing leaves</h2>
+        <p>
+          Luzeed can read the sleep <strong>measured</strong> by your iPhone or
+          Apple Watch, to replace its own estimate with a real measurement. This
+          is optional: without permission the app works exactly as described
+          above.
+        </p>
+        <p>
+          Health data is not ordinary data. The GDPR treats it as a
+          <strong>special category</strong> (article 9), and the legal basis is
+          not the same as for the rest of the app: it is your
+          <strong>explicit consent</strong>, given in Apple's permission sheet
+          and withdrawable at any time.
+        </p>
+        <ul>
+          <li>
+            <strong>We read, we never write.</strong> Luzeed puts nothing into
+            Apple Health. Its own night history is an estimate, and writing it
+            there would make it look like a measurement to every other app.
+          </li>
+          <li>
+            <strong>Sleep only</strong>: the asleep stages. No heart rate, no
+            steps, no weight, no menstrual cycle, nothing else. Not even "time in
+            bed" — being in bed is not sleeping.
+          </li>
+          <li>
+            <strong>Nothing is transmitted.</strong> What is read serves the
+            display on your phone and is sent neither to us, nor to Supabase, nor
+            to anyone. This is not a promise of intent: the code that reads this
+            data contains no network client, and an automated test fails if
+            anyone adds one.
+          </li>
+          <li>
+            <strong>Revoking access</strong>: Settings → Health → Data Access →
+            Luzeed. It takes effect immediately and erases nothing inside Apple
+            Health, which is not ours.
+          </li>
+        </ul>
+        <p>
+          🔴 This section describes what the code does today. It does
+          <em>not</em> describe Android: Health Connect is not wired up, and the
+          button there says "coming soon".
+        </p>
+
+        <h2>What we do not do</h2>
+        <ul>
+          <li>no analytics, no trackers, no advertising;</li>
+          <li>no selling, no sharing with third parties;</li>
+          <li>no location data;</li>
+          <li>
+            no health data <strong>sent anywhere</strong> — Luzeed can read your
+            sleep from Apple Health, if you allow it, and what it reads stays on
+            your phone. Details in its own section below;
+          </li>
+          <li>no profiling, no automated decisions.</li>
+        </ul>
+
+        <h3>The microphone: why iOS mentions it when it is never used</h3>
+        <p>
+          If your iPhone ever tells you Luzeed "may access the microphone", here
+          is the exact reason. The app's audio engine relies on a library that
+          <em>exposes</em> a recording function in its code. Apple then requires
+          a stated purpose, even for code that is never called.
+        </p>
+        <p>
+          <strong>Luzeed records nothing and will never request microphone
+          access.</strong> No permission dialog will be shown to you, because
+          the app never asks.
+        </p>
+
+        <h3>Notifications</h3>
+        <p>
+          Permission is requested for one thing only: the alarm. Refusing it
+          makes the alarm unusable and has no other consequence.
+        </p>
+
+        <h2>Who hosts this</h2>
+        <p>
+          Account data is hosted by
+          <a href="https://supabase.com/privacy" rel="noreferrer">Supabase</a>,
+          acting as a processor. Server region:
+          <strong>West US (Oregon), United States</strong> — identifier
+          <code>us-west-2</code>.
+        </p>
+        <p>
+          In plain terms: <strong>your account data is stored in the United
+          States</strong>, so outside the European Union and outside Canada. We
+          would rather write that plainly than let you guess it.
+        </p>
+        <p>
+          That transfer rests on the European Commission's <em>standard
+          contractual clauses</em>, included in Supabase's data processing
+          agreement. It adds nothing to what is kept — the list above is
+          complete — but it changes which country that data sits in, and you are
+          entitled to know before creating an account. The whole app stays usable
+          without one: in that case nothing leaves your phone.
+        </p>
+        <p>
+          If you sign in with Apple, Apple handles authentication under its own
+          privacy policy. All we receive from them is an identifier and, if you
+          allow it, an email address.
+        </p>
+        <p>
+          If you sign in with
+          <a href="https://policies.google.com/privacy" rel="noreferrer">Google</a>,
+          Google handles authentication under its own policy. We receive an
+          identifier, your email address and the name on your Google account.
+          Two differences from Apple, worth knowing before you choose: Google
+          offers no relay address, so your real address reaches us; and Google
+          sends your name on every sign-in, where Apple gives it only once.
+        </p>
+        <p>
+          If your Google address is already the one on a Luzeed account created
+          with email, the two are joined: a single account, and you come in
+          whichever way you like. Nothing is duplicated, and your password still
+          works.
+        </p>
+        <p>
+          We ask Google for your identity and nothing else — no access to Gmail,
+          your contacts, your calendar or Drive. You can revoke that access at
+          any time from
+          <a href="https://myaccount.google.com/connections" rel="noreferrer">your Google account connections</a>,
+          which is separate from deleting your Luzeed account.
+        </p>
+
+        <h2>How long</h2>
+        <p>
+          Your account data is kept until you delete your account. There is no
+          automatic expiry: we delete nothing behind your back.
+        </p>
+
+        <h2>Deleting your account</h2>
+        <p>
+          In the app: <strong>Me tab → Delete my account</strong>. It is
+          immediate and permanent. Your account, your saved atmospheres and your
+          night history are erased — the first two on the server, the third on
+          your phone.
+        </p>
+        <p>
+          Nothing is deactivated or set aside: it is a deletion. We keep no
+          copy.
+        </p>
+
+        <h2>Your rights</h2>
+        <p>
+          If you are in the European Union, the GDPR gives you rights of access,
+          rectification, erasure, portability, restriction and objection. Write
+          to <a href="mailto:contact@luzeed.com">contact@luzeed.com</a>: we
+          answer within 30 days.
+        </p>
+        <p>
+          The legal basis for processing is <strong>performance of the
+          contract</strong> — without an email address there is no account to
+          restore. No processing rests on a commercial interest.
+        </p>
+        <p>
+          You may also contact the data protection authority in your country.
+        </p>
+
+        <h2>Children</h2>
+        <p>
+          Luzeed is not intended for children under 13, and we do not knowingly
+          collect data about them. If you believe this has happened, write to
+          us: we will delete the account.
+        </p>
+
+        <h2>This website</h2>
+        <p>
+          This site uses no cookies, no analytics, no remote fonts and no
+          third-party scripts. The only thing it writes to your machine is your
+          language choice, kept in your browser.
+        </p>
+
+        <h2>Changes</h2>
+        <p>
+          If this policy changes, the date at the top is updated. A change that
+          genuinely affects you will be signalled in the app, not only here.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          <a href="mailto:contact@luzeed.com">contact@luzeed.com</a>
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="index.html">
+          <span class="fr">Accueil</span><span class="en">Home</span>
+        </a>
+        <a href="confidentialite.html">
+          <span class="fr">Confidentialité</span><span class="en">Privacy</span>
+        </a>
+        <a href="mailto:contact@luzeed.com">contact@luzeed.com</a>
+      </nav>
+      <p>© 2026 Luzeed</p>
+    </footer>
+
+    <script src="langue.js"></script>
+  </body>
+</html>
